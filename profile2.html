@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VolComm - Profile Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #c1feec 50%, #f2fffb);
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+    }
+    .profile-info {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-info h1 {
+      margin-top: 0;
+    }
+    .profile-info img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .timeline {
+      flex: 2;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      height: 100%;
+    }
+    .timeline svg {
+      position: absolute;
+      left: -40px;
+      top: 0;
+      width: 40px;
+      height: 100%;
+    }
+    .timeline-content {
+      padding-left: 60px;
+    }
+    .checkpoint {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .checkpoint:last-child {
+      margin-bottom: 0;
+    }
+    .checkpoint h3 {
+      margin: 0;
+    }
+    .checkpoint p {
+      margin: 5px 0 0;
+      color: #555;
+    }
+    .checkpoint .date {
+      font-size: 0.8em;
+      color: #888;
+    }
+    .profile-info .skills {
+      margin-top: 20px;
+    }
+    .profile-info .skills h2 {
+      margin-bottom: 10px;
+    }
+    .profile-info .skills ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .profile-info .skills li {
+      background: #e0e0e0;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-info">
+      <img src="https://via.placeholder.com/120" alt="Profile Picture">
+      <h1>Jane Doe</h1>
+      <p>Email: jane.doe@example.com</p>
+      <p>Location: New York, NY</p>
+      <div class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Event Management</li>
+          <li>Community Outreach</li>
+          <li>Public Speaking</li>
+          <li>Fundraising</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline">
+      <svg viewBox="0 0 100 2000">
+        <path d="M200,10 V1990" stroke="#87CEEB" stroke-width="4" fill="none"/>
+        <circle cx="200" cy="100" r="5" fill="#87CEEB"/>
+        <circle cx="200" cy="300" r="5" fill="#87CEEB"/>
+        <circle cx="200" cy="500" r="5" fill="#87CEEB"/>
+        <circle cx="200" cy="700" r="5" fill="#87CEEB"/>
+        <circle cx="200" cy="900" r="5" fill="#87CEEB"/>
+      </svg>
+      <div class="timeline-content">
+        <div class="checkpoint">
+          <h3>Community Clean-Up</h3>
+          <p class="date">March 2024</p>
+          <p>Participated in a local clean-up event to help maintain the beauty of the community park.</p>
+        </div>
+        <div class="checkpoint">
+          <h3>Fundraising Gala</h3>
+          <p class="date">January 2024</p>
+          <p>Organized a fundraising event to support local charities, raising over $10,000.</p>
+        </div>
+        <div class="checkpoint">
+          <h3>Food Drive</h3>
+          <p class="date">November 2023</p>
+          <p>Volunteered to collect and distribute food donations to families in need during the holiday season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

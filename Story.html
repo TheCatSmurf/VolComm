@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin:0;
+      height: 2000px; /* For demo purposes */
+    }
+    #timeline-svg {
+      position: fixed;
+      top: 0;
+      left: -600px;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+    #timeline {
+      stroke: #87CEEB;
+      stroke-width: 10;
+      stroke-dasharray: 0;
+      transition: stroke-dasharray 0.5s ease;
+    }
+    .checkpoint {
+      fill: #87CEEB;
+      stroke: #088F8F;
+      stroke-width: 30;
+    }
+  </style>
+</head>
+<body>
+  <svg id="timeline-svg" width="100%" height="100%" viewBox="0 0 100 2000">
+    <path id="timeline" d="M10,10 V1990" stroke="#ddd" stroke-width="100" fill="none"/>
+    <!-- Checkpoints -->
+    <circle class="checkpoint" cx="10" cy="100" r="5" />
+    <circle class="checkpoint" cx="10" cy="500" r="5" />
+    <circle class="checkpoint" cx="10" cy="1000" r="5" />
+    <circle class="checkpoint" cx="10" cy="1500" r="5" />
+    <circle class="checkpoint" cx="10" cy="1990" r="5" />
+  </svg>
+
+  <script>
+    document.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      const scrollPercentage = Math.min(scrollPosition / (documentHeight - windowHeight), 1);
+      const path = document.querySelector('#timeline');
+      const pathLength = path.getTotalLength();
+
+      path.style.strokeDasharray = `${scrollPercentage * pathLength} ${pathLength}`;
+    });
+  </script>
+</body>
+</html>

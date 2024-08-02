@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolComm - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">VolComm</a></h1>
+    </header>
+    <main>
+        <section class="login">
+            <div class="login-box">
+                <h3>Login</h3>
+                <form action="#">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="links">
+                    <a href="/ForgotPassword.html">Forgot Password?</a>
+                    <a href="/SignUp.html">Sign Up</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 VolComm. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === '' || password === '') {
+                alert('Please fill in both fields');
+            } else {
+                alert('Login successful');
+                // You can add further logic here to send the data to the server
+            }
+        });
+    </script>
+</body>
+</html>
