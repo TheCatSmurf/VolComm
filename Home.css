@@ -24,7 +24,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: black;
+    
 }
 
 nav li {
@@ -32,13 +32,14 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: rgb(67, 0, 80);
     text-decoration: none;
     font-weight: bold;
 }
 
 main {
     padding: 20px;
+    align-items: center;
 }
 
 section {
@@ -50,7 +51,8 @@ section {
 }
 
 .featured-opportunities, .upcoming-events {
-    display: flex;
+    display: flexbox;
+    padding-left: 35%;
     justify-content: space-around;
     flex-wrap: wrap;
 }
