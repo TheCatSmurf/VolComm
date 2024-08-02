@@ -121,3 +121,7 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+#login-link, #register-link {
+    align-items: end;
+}

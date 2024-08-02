@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Volunteering Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>VolComm - Every Act Counts</title>
+    <link rel="stylesheet" href="Home2.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Community Volunteering Platform</h1>
+            <h1>VolComm</h1><br>
             <nav>
                 <ul id="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Home2.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="opportunities.html">Volunteer Opportunities</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
                     <li><a href="events.html">Events</a></li>
-                    <li><a href="login.html" id="login-link">Login</a></li>
-                    <li><a href="register.html" id="register-link">Register</a></li>
+                    <li><a href="SingIn.html" id="login-link">Login</a></li>
+                    <li><a href="SignUp.html" id="register-link">Register</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,9 +25,9 @@
     <main>
         <div class="hero">
             <div class="container">
-                <h2>Join Us in Making a Difference</h2>
-                <p>We connect volunteers with local opportunities to make a positive impact in the community. Whether you have a few hours or a few days to give, there's a place for you here.</p>
-                <a href="register.html" class="btn-primary">Get Started</a>
+                <h2 id="hero-heading">Join Us in Making a Difference</h2>
+                <p id="hero-paragraph">We connect volunteers with local opportunities to make a positive impact in the community. Whether you have a few hours or a few days to give, there's a place for you here.</p>
+                <a href="register.html" class="btn-primary" id="get-started-button">Get Started</a>
             </div>
         </div>
         <div class="container">
@@ -59,7 +59,7 @@
                     <a href="event2.html" class="btn-secondary">Details</a>
                 </div>
             </section>
-            <section class="join-us">
+            <section class="join-us" id="join-us-section">
                 <h2>Get Involved</h2>
                 <p>Ready to make a difference? <a href="register.html">Sign up</a> now to join our community of volunteers and start making an impact today.</p>
             </section>
@@ -80,12 +80,17 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.getElementById('nav-links');
-            if (user.isLoggedIn) {
-                const loginLink = document.getElementById('login-link');
-                const registerLink = document.getElementById('register-link');
-                loginLink.style.display = 'none';
-                registerLink.style.display = 'none';
+            const joinUsSection = document.getElementById('join-us-section');
+            const heroHeading = document.getElementById('hero-heading');
+            const heroParagraph = document.getElementById('hero-paragraph');
+            const getStartedButton = document.getElementById('get-started-button');
 
+            if (user.isLoggedIn) {
+                // Hide login and register links
+                document.getElementById('login-link').style.display = 'none';
+                document.getElementById('register-link').style.display = 'none';
+
+                // Show profile link and logout link
                 const userNameItem = document.createElement('li');
                 userNameItem.textContent = user.name;
 
@@ -102,13 +107,19 @@
                 logoutLink.addEventListener('click', () => {
                     // Handle logout logic here
                     alert('Logged out');
-                    // You may want to redirect to the homepage or login page after logout
+                    // Redirect to the homepage or login page after logout
                 });
 
                 logoutItem.appendChild(logoutLink);
                 navLinks.appendChild(profileItem);
                 navLinks.appendChild(userNameItem);
                 navLinks.appendChild(logoutItem);
+
+                // Hide the hero section content and the "Get Involved" section
+                heroHeading.style.display = 'none';
+                heroParagraph.style.display = 'none';
+                getStartedButton.style.display = 'none';
+                joinUsSection.style.display = 'none';
             }
         });
     </script>
