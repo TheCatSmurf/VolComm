@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Example user data
 const user = {
-    isLoggedIn: false,
+    isLoggedIn: true,
     name: "Aditya N"
 };
 

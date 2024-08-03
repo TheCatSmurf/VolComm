@@ -64,86 +64,122 @@
     }
   </style>
 </head>
+
 <body>
-  <svg id="timeline-svg" width="100px" height="100%" viewBox="0 0 20 2000">
-    <path id="timeline" d="M10,10 V1990" fill="none"/>
-    <!-- Checkpoints -->
-    <!-- Checkpoints are not needed in the SVG since they will move with the content -->
+  <header>
+    <div class="container">
+
+        <img src="logo.jpeg" alt="VolComm Logo" class="logo">
+        <h1><a href="/">VolComm</a></h1><br>
+        
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="SignIn.html" id="login-link">Login</a></li>
+                <li><a href="SignUp.html" id="register-link">Register</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+        </div>
+
+    </div>
+
+</header>
+
+<svg id="timeline-svg" width="100px" height="100%" viewBox="0 0 20 2000">
+  <path id="timeline" d="M10,10 V1990" fill="none"/>
+  <!-- Checkpoints -->
+  <!-- Checkpoints are not needed in the SVG since they will move with the content -->
+</svg>
+
+<!-- Checkpoint Contents -->
+<div class="checkpoint-content">
+  <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+    <circle class="checkpoint" cx="10" cy="10" r="5" />
   </svg>
-
-  <!-- Checkpoint Contents -->
-  <div class="checkpoint-content">
-    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
-      <circle class="checkpoint" cx="10" cy="10" r="5" />
-    </svg>
-    <img src="https://via.placeholder.com/100" alt="Community Clean-Up">
-    <div>
-      <h3>Community Clean-Up</h3>
-      <p class="date">March 2024</p>
-      <p>Participated in a local clean-up event to help maintain the beauty of the community park.</p>
-    </div>
+  <img src="https://via.placeholder.com/100" alt="Community Clean-Up">
+  <div>
+    <h3>Community Clean-Up</h3>
+    <p class="date">March 2024</p>
+    <p>Participated in a local clean-up event to help maintain the beauty of the community park.</p>
   </div>
+</div>
 
-  <div class="checkpoint-content">
-    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
-      <circle class="checkpoint" cx="10" cy="10" r="5" />
-    </svg>
-    <img src="https://via.placeholder.com/100" alt="Fundraising Gala">
-    <div>
-      <h3>Fundraising Gala</h3>
-      <p class="date">January 2024</p>
-      <p>Organized a fundraising event to support local charities, raising over $10,000.</p>
-    </div>
+<div class="checkpoint-content">
+  <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+    <circle class="checkpoint" cx="10" cy="10" r="5" />
+  </svg>
+  <img src="https://via.placeholder.com/100" alt="Fundraising Gala">
+  <div>
+    <h3>Fundraising Gala</h3>
+    <p class="date">January 2024</p>
+    <p>Organized a fundraising event to support local charities, raising over $10,000.</p>
   </div>
+</div>
 
-  <div class="checkpoint-content">
-    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
-      <circle class="checkpoint" cx="10" cy="10" r="5" />
-    </svg>
-    <img src="https://via.placeholder.com/100" alt="Food Drive">
-    <div>
-      <h3>Food Drive</h3>
-      <p class="date">November 2023</p>
-      <p>Volunteered to collect and distribute food donations to families in need during the holiday season.</p>
-    </div>
+<div class="checkpoint-content">
+  <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+    <circle class="checkpoint" cx="10" cy="10" r="5" />
+  </svg>
+  <img src="https://via.placeholder.com/100" alt="Food Drive">
+  <div>
+    <h3>Food Drive</h3>
+    <p class="date">November 2023</p>
+    <p>Volunteered to collect and distribute food donations to families in need during the holiday season.</p>
   </div>
+</div>
 
-  <div class="checkpoint-content">
-    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
-      <circle class="checkpoint" cx="10" cy="10" r="5" />
-    </svg>
-    <img src="https://via.placeholder.com/100" alt="Clothing Drive">
-    <div>
-      <h3>Clothing Drive</h3>
-      <p class="date">September 2023</p>
-      <p>Collected and distributed clothes to the homeless community before the winter season.</p>
-    </div>
+<div class="checkpoint-content">
+  <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+    <circle class="checkpoint" cx="10" cy="10" r="5" />
+  </svg>
+  <img src="https://via.placeholder.com/100" alt="Clothing Drive">
+  <div>
+    <h3>Clothing Drive</h3>
+    <p class="date">September 2023</p>
+    <p>Collected and distributed clothes to the homeless community before the winter season.</p>
   </div>
+</div>
 
-  <div class="checkpoint-content">
-    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
-      <circle class="checkpoint" cx="10" cy="10" r="5" />
-    </svg>
-    <img src="https://via.placeholder.com/100" alt="Blood Donation Camp">
-    <div>
-      <h3>Blood Donation Camp</h3>
-      <p class="date">July 2023</p>
-      <p>Organized a blood donation camp that received contributions from over 200 donors.</p>
-    </div>
+<div class="checkpoint-content">
+  <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+    <circle class="checkpoint" cx="10" cy="10" r="5" />
+  </svg>
+  <img src="https://via.placeholder.com/100" alt="Blood Donation Camp">
+  <div>
+    <h3>Blood Donation Camp</h3>
+    <p class="date">July 2023</p>
+    <p>Organized a blood donation camp that received contributions from over 200 donors.</p>
   </div>
+</div>
 
-  <script>
-    document.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+<script>
+  document.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
 
-      const scrollPercentage = Math.min(scrollPosition / (documentHeight - windowHeight), 1);
-      const path = document.querySelector('#timeline');
-      const pathLength = path.getTotalLength();
+    const scrollPercentage = Math.min(scrollPosition / (documentHeight - windowHeight), 1);
+    const path = document.querySelector('#timeline');
+    const pathLength = path.getTotalLength();
 
-      path.style.strokeDasharray = `${scrollPercentage * pathLength} ${pathLength}`;
-    });
-  </script>
+    path.style.strokeDasharray = `${scrollPercentage * pathLength} ${pathLength}`;
+  });
+</script>
+<script src="script.js"></script>
 </body>
 </html>
