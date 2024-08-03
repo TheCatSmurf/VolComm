@@ -17,27 +17,19 @@ body {
 header {
     background-color: #088F8F;
     color: #fff;
-    padding: 20px 0;
+    padding: 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    margin: 0 50px 0;
     font-size: 2em;
+    text-align: left;
 }
 
 header h1 a {
     color: #ffffff;
     text-decoration: none;
-}
-
-.logo {
-    display: flex;
-    margin-left: 100px;
-    width: 100px;
-    height: auto;
-    margin-top: 0;
-    margin-bottom: 20px; /* Add space between logo and header */
 }
 
 nav {
@@ -47,7 +39,7 @@ nav {
 .nav-links {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 10px;
     display: flex;
     justify-content: center;
 }
@@ -104,24 +96,25 @@ nav {
 }
 
 .hero {
-    padding: 60px 0;
+    margin: auto;
+    padding: 10px;
     text-align: center;
 }
 
 .hero h2 {
-    margin: 0;
+    margin: 10px 10px;
     font-size: 2.5em;
 }
 
 .hero p {
-    margin: 20px 0;
+    margin: 10px 50px;
     font-size: 1.2em;
 }
 
 .btn-primary {
     background-color: #00a0dc;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
