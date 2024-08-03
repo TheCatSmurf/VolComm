@@ -14,15 +14,15 @@ body {
 .profile-container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
-.profile-info {
+.profile-info, .timeline {
   background: #ffffff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
+  width: 45%;
 }
 
 .profile-info h1 {
@@ -58,16 +58,7 @@ body {
   display: inline-block;
 }
 
-.timeline {
-  flex-grow: 1;
-  margin-left: 20px;
-}
-
 .timeline-content {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
