@@ -4,6 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #c1feec 50%, #f2fffb );
     color: #333;
+    min-height: 100vh; /* Ensure background covers the full viewport height */
 }
 
 .container {
@@ -27,6 +28,80 @@ header h1 a {
     color: #ffffff;
 }
 
+
+
+.logo {
+    bay: flex;
+    margin-left: 100px;
+    width: 100px;
+    height: auto;
+    margin-top: px;
+    margin-bottom: 20px; /* Add space between logo and header */
+}
+
+nav {
+    position: reellative;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mobile menu toggle button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #088F8F;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -45,8 +120,8 @@ nav a {
     font-weight: bold;
 }
 
-.hero {
-    color: #fff;
+.hero  {
+    color: a7c7e7;
     padding: 60px 0;
     text-align: center;
 }
@@ -263,4 +338,170 @@ button:hover {
     border-radius: 5px;
     background: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#search-button {
+    padding: 5px 1px;
+    width: 100px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #77c4d3;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #66aabb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #c1feec 50%, #f2fffb);
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure background covers the full viewport height */
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+  .profile-info {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .profile-info h1 {
+    margin-top: 0;
+  }
+  .profile-info img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .timeline {
+    flex: 2;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100%;
+    margin-left: 50px;
+  }
+  .timeline svg {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+  }
+  .timeline-content {
+    padding-left: 60px;
+    line-height: 25px;
+  }
+  .checkpoint {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .checkpoint:last-child {
+    margin-bottom: 0;
+  }
+  .checkpoint h3 {
+    margin: 0;
+  }
+  .checkpoint p {
+    margin: 5px 5px 0;
+    color: #555;
+  }
+  .checkpoint .date {
+    font-size: 0.8em;
+    color: #888;
+    margin-left: 5px;
+  }
+  .profile-info .skills {
+    margin-top: 20px;
+  }
+  .profile-info .skills h2 {
+    margin-bottom: 10px;
+  }
+  .profile-info .skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .profile-info .skills li {
+    background: #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #77c4d3;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #66aabb;
+}
+
+#postsContainer {
+    margin-top: 20px;
+}
+
+.post {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    margin-top: 0;
 }

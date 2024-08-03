@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VolComm - Profile Page</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      margin:0;
-      height: 2000px; /* For demo purposes */
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #c1feec 50%, #f2fffb);
+      font-family: Arial, sans-serif;
+      position: relative;
     }
     #timeline-svg {
       position: fixed;
       top: 0;
-      left: -600px;
-      width: 100%;
+      left: 160px;
+      width: 100px;
       height: 100%;
       overflow: visible;
     }
@@ -25,20 +30,107 @@
     .checkpoint {
       fill: #87CEEB;
       stroke: #088F8F;
-      stroke-width: 30;
+      stroke-width: 3;
+    }
+    .checkpoint-content {
+      position: relative;
+      left: 250px;
+      width: calc(100% - 320px);
+      padding: 10px;
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      margin-top: 100px;
+    }
+    .checkpoint-content img {
+      border-radius: 8px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    .checkpoint-content h3 {
+      margin: 0;
+    }
+    .checkpoint-content .date {
+      font-size: 0.8em;
+      color: #888;
+    }
+    .checkpoint-content p {
+      margin: 5px 0 0;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <svg id="timeline-svg" width="100%" height="100%" viewBox="0 0 100 2000">
-    <path id="timeline" d="M10,10 V1990" stroke="#ddd" stroke-width="100" fill="none"/>
+  <svg id="timeline-svg" width="100px" height="100%" viewBox="0 0 20 2000">
+    <path id="timeline" d="M10,10 V1990" fill="none"/>
     <!-- Checkpoints -->
-    <circle class="checkpoint" cx="10" cy="100" r="5" />
-    <circle class="checkpoint" cx="10" cy="500" r="5" />
-    <circle class="checkpoint" cx="10" cy="1000" r="5" />
-    <circle class="checkpoint" cx="10" cy="1500" r="5" />
-    <circle class="checkpoint" cx="10" cy="1990" r="5" />
+    <!-- Checkpoints are not needed in the SVG since they will move with the content -->
   </svg>
+
+  <!-- Checkpoint Contents -->
+  <div class="checkpoint-content">
+    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+      <circle class="checkpoint" cx="10" cy="10" r="5" />
+    </svg>
+    <img src="https://via.placeholder.com/100" alt="Community Clean-Up">
+    <div>
+      <h3>Community Clean-Up</h3>
+      <p class="date">March 2024</p>
+      <p>Participated in a local clean-up event to help maintain the beauty of the community park.</p>
+    </div>
+  </div>
+
+  <div class="checkpoint-content">
+    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+      <circle class="checkpoint" cx="10" cy="10" r="5" />
+    </svg>
+    <img src="https://via.placeholder.com/100" alt="Fundraising Gala">
+    <div>
+      <h3>Fundraising Gala</h3>
+      <p class="date">January 2024</p>
+      <p>Organized a fundraising event to support local charities, raising over $10,000.</p>
+    </div>
+  </div>
+
+  <div class="checkpoint-content">
+    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+      <circle class="checkpoint" cx="10" cy="10" r="5" />
+    </svg>
+    <img src="https://via.placeholder.com/100" alt="Food Drive">
+    <div>
+      <h3>Food Drive</h3>
+      <p class="date">November 2023</p>
+      <p>Volunteered to collect and distribute food donations to families in need during the holiday season.</p>
+    </div>
+  </div>
+
+  <div class="checkpoint-content">
+    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+      <circle class="checkpoint" cx="10" cy="10" r="5" />
+    </svg>
+    <img src="https://via.placeholder.com/100" alt="Clothing Drive">
+    <div>
+      <h3>Clothing Drive</h3>
+      <p class="date">September 2023</p>
+      <p>Collected and distributed clothes to the homeless community before the winter season.</p>
+    </div>
+  </div>
+
+  <div class="checkpoint-content">
+    <svg class="checkpoint-svg" width="20" height="100" viewBox="0 0 20 20" style="position:absolute;left:-50px;top:40px;">
+      <circle class="checkpoint" cx="10" cy="10" r="5" />
+    </svg>
+    <img src="https://via.placeholder.com/100" alt="Blood Donation Camp">
+    <div>
+      <h3>Blood Donation Camp</h3>
+      <p class="date">July 2023</p>
+      <p>Organized a blood donation camp that received contributions from over 200 donors.</p>
+    </div>
+  </div>
 
   <script>
     document.addEventListener('scroll', () => {

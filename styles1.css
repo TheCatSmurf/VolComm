@@ -1,0 +1,491 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #c1feec 50%, #f2fffb);
+    color: #333;
+    min-height: 100vh; /* Ensure background covers the full viewport height */
+}
+
+/* General container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #088F8F;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+header h1 a {
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+.hero {
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.btn-primary {
+    background-color: #00a0dc;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0073b1;
+}
+
+.featured-opportunities, .upcoming-events {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-opportunities h2, .upcoming-events h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.opportunity, .event {
+    margin-bottom: 20px;
+}
+
+.opportunity h3, .event h3 {
+    margin: 0 0 10px;
+    font-size: 1.4em;
+}
+
+.btn-secondary {
+    background-color: #00a0dc;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #0073b1;
+}
+
+.join-us {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#opportunities-list {
+    margin-top: 20px;
+}
+
+.opportunity {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background: #f9f9f9;
+}
+
+.opportunity h3 {
+    margin-top: 0;
+}
+
+footer {
+    background-color:  #088F8F;
+    color: #fff;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+#events-list {
+    margin-top: 20px;
+}
+
+.event {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.event:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.event h3 {
+    margin-top: 0;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.login-box {
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h3 {
+    margin-top: 0;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    margin: 10px 0 5px;
+}
+
+.login-box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1A237E;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-box button:hover {
+    background-color: #FF7F50;
+}
+
+.register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    align-content: center;
+}
+
+.login-container h2, .register-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#profile-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#search-button {
+    padding: 5px 1px;
+    width: 100px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #77c4d3;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #66aabb;
+}
+
+.profile-info {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h1 {
+    margin-top: 0;
+}
+
+.profile-info img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.timeline {
+    flex: 2;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100%;
+    margin-left: 50px;
+}
+
+.timeline svg {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+}
+
+.timeline-content {
+    padding-left: 60px;
+    line-height: 25px;
+}
+
+.checkpoint {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkpoint:last-child {
+    margin-bottom: 0;
+}
+
+.checkpoint h3 {
+    margin: 0;
+}
+
+.checkpoint p {
+    margin: 5px 5px 0;
+    color: #555;
+}
+
+.checkpoint .date {
+    font-size: 0.8em;
+    color: #888;
+    margin-left: 5px;
+}
+
+.profile-info .skills {
+    margin-top: 20px;
+}
+
+.profile-info .skills h2 {
+    margin-bottom: 10px;
+}
+
+.profile-info .skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-info .skills li {
+    background: #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #77c4d3;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #66aabb;
+}
+
+#postsContainer {
+    margin-top: 20px;
+}
+
+.post {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .timeline {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-info, .timeline {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .timeline {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .featured-opportunities h2, .upcoming-events h2 {
+        font-size: 1.5em;
+    }
+
+    .opportunity h3, .event h3 {
+        font-size: 1.2em;
+    }
+}

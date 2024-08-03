@@ -9,17 +9,33 @@
 <body>
     <header>
         <div class="container">
-            <h1>VolComm</h1><br>
+            <div class="logo">
+                <img src="logo.jpeg" alt="VolComm Logo" class="logo">
+                <h1><a href="#">VolComm</a></h1><br>
+            </div>
+             
+            
+
             <nav>
-                <ul id="nav-links">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="opportunities.html">Opportunities</a></li>
                     <li><a href="events.html">Events</a></li>
+                    <li><a href="post.html">Post</a></li>
                     <li><a href="SignIn.html" id="login-link">Login</a></li>
                     <li><a href="SignUp.html" id="register-link">Register</a></li>
                 </ul>
             </nav>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
         </div>
     </header>
     <main>
@@ -61,7 +77,7 @@
             </section>
             <section class="join-us" id="join-us-section">
                 <h2>Get Involved</h2>
-                <p>Ready to make a difference? <a href="register.html">Sign up</a> now to join our community of volunteers and start making an impact today.</p>
+                <p>Ready to make a difference? <a href="SignUp.html">Sign up</a> now to join our community of volunteers and start making an impact today.</p>
             </section>
         </div>
     </main>

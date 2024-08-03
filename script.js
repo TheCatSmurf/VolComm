@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Example user data
 const user = {
-    isLoggedIn: true,
-    name: "John Doe"
+    isLoggedIn: false,
+    name: "Aditya N"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -62,58 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-//Opportunites
-document.addEventListener("DOMContentLoaded", function() {
-    // Example volunteer opportunities data
-    const volunteerOpportunities = [
-        {
-            name: "Community Clean-Up",
-            description: "Join us for a community clean-up event in the local park.",
-            date: "2024-08-15",
-            location: "Local Park"
-        },
-        {
-            name: "Food Bank Assistance",
-            description: "Help sort and distribute food at the local food bank.",
-            date: "2024-08-20",
-            location: "Community Food Bank"
-        },
-        {
-            name: "Senior Center Visit",
-            description: "Spend time with seniors and assist with activities at the senior center.",
-            date: "2024-08-25",
-            location: "Senior Center"
-        }
-    ];
 
-    // Populate the opportunities list
-    const opportunitiesList = document.getElementById("opportunities-list");
-    volunteerOpportunities.forEach(opportunity => {
-        const opportunityElement = document.createElement("div");
-        opportunityElement.className = "opportunity";
-        opportunityElement.innerHTML = `
-            <h3>${opportunity.name}</h3>
-            <p>${opportunity.description}</p>
-            <p><strong>Date:</strong> ${opportunity.date}</p>
-            <p><strong>Location:</strong> ${opportunity.location}</p>
-        `;
-        opportunitiesList.appendChild(opportunityElement);
-    });
 
-    // Handle navigation link updates based on login status
-    if (localStorage.getItem("loggedIn") === "true") {
-        document.getElementById("login-link").style.display = "none";
-        document.getElementById("register-link").style.display = "none";
-        const profileLink = document.createElement("li");
-        profileLink.innerHTML = '<a href="profile.html" id="profile-link">Profile</a>';
-        document.getElementById("nav-links").appendChild(profileLink);
-    } else {
-        document.getElementById("login-link").style.display = "inline";
-        document.getElementById("register-link").style.display = "inline";
-    }
-});
 
-//events
+
 
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -130,3 +82,45 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const postForm = document.getElementById('postForm');
+    const postsContainer = document.getElementById('postsContainer');
+
+    postForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+
+        if (title && content) {
+            addPost(title, content);
+            postForm.reset();
+        } else {
+            alert('Please fill out all fields');
+        }
+    });
+
+    function addPost(title, content) {
+        const post = document.createElement('div');
+        post.classList.add('post');
+
+        const postTitle = document.createElement('h3');
+        postTitle.textContent = title;
+        post.appendChild(postTitle);
+
+        const postContent = document.createElement('p');
+        postContent.textContent = content;
+        post.appendChild(postContent);
+
+        postsContainer.appendChild(post);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});

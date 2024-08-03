@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VolComm</h1><br>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="post.html">Post</a></li>
+                    <li><a href="SignIn.html" id="login-link">Login</a></li>
+                    <li><a href="SignUp.html" id="register-link">Register</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Create a Post</h2>
+        <form id="postForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" rows="10" required></textarea>
+            
+            <button type="submit">Post</button>
+        </form>
+        <div id="postsContainer">
+            <!-- Posts will be displayed here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
