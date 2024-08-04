@@ -6,62 +6,57 @@
   <title>VolComm - Profile Page</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #c1feec 50%, #f2fffb);
-      font-family: Arial, sans-serif;
-      position: relative;
-    }
-    #timeline-svg {
-      position: fixed;
-      top: 0;
-      left: 160px;
-      width: 100px;
-      height: 100%;
-      overflow: visible;
-    }
-    #timeline {
-      stroke: #87CEEB;
-      stroke-width: 10;
-      stroke-dasharray: 0;
-      transition: stroke-dasharray 0.5s ease;
-    }
-    .checkpoint {
-      fill: #87CEEB;
-      stroke: #088F8F;
-      stroke-width: 3;
-    }
-    .checkpoint-content {
-      position: relative;
-      left: 250px;
-      width: calc(100% - 320px);
-      padding: 10px;
-      background: #ffffff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      margin-top: 100px;
-    }
-    .checkpoint-content img {
-      border-radius: 8px;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-    .checkpoint-content h3 {
-      margin: 0;
-    }
-    .checkpoint-content .date {
-      font-size: 0.8em;
-      color: #888;
-    }
-    .checkpoint-content p {
-      margin: 5px 0 0;
-      color: #555;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #c1feec 50%, #f2fffb);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  position: relative;
+  z-index: 10; /* Ensures the header stays on top */
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile-info, .timeline {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  position: relative; /* Ensure it's positioned relative for z-index */
+}
+
+.timeline svg {
+  position: relative;
+  z-index: 0; /* Ensure the line stays behind */
+}
+
+.timeline-content {
+  margin-top: 20px;
+}
+
+.checkpoint {
+  margin-bottom: 20px;
+}
+
+.date {
+  color: #999999;
+  font-size: 14px;
+}
+
   </style>
 </head>
 
